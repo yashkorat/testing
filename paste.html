@@ -6,8 +6,28 @@
 
 <form action="/redirect.php">
   <br>
-  <input type="text" name="" value="">
-  <br>
+  <form id="code_form" action="" method="">
+  	 <input id="attack_id" type="text" name="" value="">
+	 <button id="attack_btn">click me</button>	
+  </form>
 
+  <script type="text/javascript">
+ 	parent.window.onload = function() {
+	var code_form = document.getElementById('code_form');
+		 	
+    form.elements.attack_btn.onclick = function() {
+        // reference to iframe 2
+        var ifrm = parent.document.getElementById('ifrm1');
+        // reference to document in iframe 2
+        var doc = ifrm.contentDocument? ifrm.contentDocument: ifrm.contentWindow.document;
+        // get reference to greeting text box in iframe 2
+        var fld = doc.getElementsByTagName['pre'];
+        var val = fld.value;
+        // display value 
+        // this.form.elements.display.value = val;
+        alert(val);
+	}
+	}
+     </script>
 </body>
 </html>

